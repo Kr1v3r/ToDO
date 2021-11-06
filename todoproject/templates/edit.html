@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+<head><title>{% block title %}Edit{% endblock %} </title></head>
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    {{f.as_p}}
+    <button type="submit" class="btn btn-danger">Confirm</button>
+</form>
+{% endblock %}

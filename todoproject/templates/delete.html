@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+<head><title>{% block title %}Delete{% endblock %} </title></head>
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <p>Are you sure , You completed this task ?</p>
+    <button type="submit" class="btn btn-danger">Confirm</button>
+</form>
+{% endblock %}
